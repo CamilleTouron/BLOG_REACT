@@ -37,14 +37,3 @@ Welcome to my Web Accessibility and Quality Blog project! This blog is designed 
     ```
 
    The application will be available at `http://localhost:3000`.
-
-## RGAA Compliance
-
-This project is committed to adhering to the RGAA standards to ensure web accessibility. Key considerations include:
-
-- Text alternatives for non-text content.
-- Content that can be presented in different ways without losing information.
-- Functionality accessible through a keyboard.
-- Users have enough time to read and use the content.
-- Content is designed in a way that is not known to cause seizures.
-- Easy navigation and identification of content.
