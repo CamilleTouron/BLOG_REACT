@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -27,7 +28,8 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.VPS_PORT }}
           script: |
-            cd /path/to/your/react/project
-            git pull origin main  # Pull latest changes
-            npm install  # Install any new dependencies
-            npm run build  # Build your React project
+            cd /home/ubuntu/projects
+            git clone -b main https://github.com/CamilleTouron/BLOG_REACT.git . 
+            npm install
+            npm run build
+            npm start
