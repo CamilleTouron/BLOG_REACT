@@ -17,8 +17,10 @@ function App() {
             <header className="App-header">
                 <Navbar setIsLogin={setIsLogin}/>
             </header>
-            {!isLogin && <Login setIsLogin={setIsLogin}/>}
-            {isLogin && <Home/>}
+            <main>
+                {!isLogin && <Login setIsLogin={setIsLogin}/>}
+                {isLogin && <Home/>}
+            </main>
             <footer>
                 <Footer/>
             </footer>

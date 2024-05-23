@@ -1,8 +1,11 @@
 body {
     background-color: #f8f9fa; /* Sets the background color for the entire page */
+    position: relative;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+}
+
+main {
+    padding-bottom: 2.5rem; /* Adds space at the bottom of the page for the footer */
 }
 
 h1 {
@@ -13,7 +16,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem !important; /* Larger font size for the heading */
+    font-size: 1.5rem !important; /* Larger font size for the heading */
     margin-bottom: 1rem !important; /* Space between heading and input fields */
     color: #123A3A !important; /* Green color for the heading */
 }
@@ -64,11 +67,11 @@ h2 {
     color: white;
     font-family: Georgia, serif; /* Font family for the heading */
     font-size: 1rem !important; /* Larger font size for the heading */
-    height: 3rem;
-    position: fixed;
-    left: 0;
+    position: absolute;
     bottom: 0;
     width: 100%;
+    height: 2.5rem;
+
 }
 
 /* button style green with white text with a bit of margin */
@@ -87,6 +90,28 @@ button {
 /* disconnect button in navbar sticking to the right */
 #disconnect{
     margin-left: auto;
+}
+/* cards reactstrap style to minimize img size*/
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+/* css to make element within cards the same size*/
+.card-text, .card-link{
+    height: 5rem;
+}
+
+.card-link{
+    color: #123A3A;
+}
+
+.card {
+    margin: 1rem;
+    outline: #c9cdcd solid 0.2rem;
+}
+#home{
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 576px) {

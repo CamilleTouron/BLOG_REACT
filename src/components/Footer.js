@@ -3,7 +3,7 @@ import React from 'react';
 const FooterComponent = () => {
     return (
         <div id="footer">
-            &copy; 2024 MyMountains.com
+            &copy; 2024 mesmontages.com
         </div>
     );
 };
