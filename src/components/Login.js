@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react';
 import {Button, Container, Form, Input, Label} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Login = () => {
+// component Login that takes props setIsLogin
+const Login = ({setIsLogin}) => {
     useEffect(() => {
         document.title = 'Login MyMountains'; // Set the title of the page
     }, []);
@@ -35,7 +36,8 @@ const Login = () => {
         if (isEmailValid(email) || isPasswordValid(password)) {
             setErrorEmail(false);
             setErrorPassword(false);
-            // TODO: Redirect to home page
+            setIsLogin(true);
+            window.location.reload();
         } else {
             setErrorEmail(isEmailValid(email));
             setErrorPassword(isPasswordValid(password));

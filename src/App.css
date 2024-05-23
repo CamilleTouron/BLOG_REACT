@@ -71,6 +71,24 @@ h2 {
     width: 100%;
 }
 
+/* button style green with white text with a bit of margin */
+button {
+    background-color: #123A3A;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin: 0.5rem;
+    font-family: Georgia, serif !important; /* Font family for the heading */
+    font-size: 1rem !important; /* Larger font size for the heading */
+}
+
+/* disconnect button in navbar sticking to the right */
+#disconnect{
+    margin-left: auto;
+}
+
 @media (max-width: 576px) {
     #login {
         width: 75%; /* Even wider on very small screens for better readability */
