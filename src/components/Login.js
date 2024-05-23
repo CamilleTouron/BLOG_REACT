@@ -37,8 +37,8 @@ const Login = () => {
             setErrorPassword(false);
             // TODO: Redirect to home page
         } else {
-            setErrorEmail(true);
-            setErrorPassword(true);
+            setErrorEmail(isEmailValid(email));
+            setErrorPassword(isPasswordValid(password));
         }
     };
 
