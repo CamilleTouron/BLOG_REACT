@@ -16,7 +16,19 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem !important; /* Larger font size for the heading */
+    font-size: 1.8rem !important; /* Larger font size for the heading */
+    margin-bottom: 1rem !important; /* Space between heading and input fields */
+    color: #123A3A !important; /* Green color for the heading */
+}
+
+h3 {
+    font-size: 1.4rem !important; /* Larger font size for the heading */
+    margin-bottom: 1rem !important; /* Space between heading and input fields */
+    color: #123A3A !important; /* Green color for the heading */
+}
+
+h4 {
+    font-size: 1rem !important; /* Larger font size for the heading */
     margin-bottom: 1rem !important; /* Space between heading and input fields */
     color: #123A3A !important; /* Green color for the heading */
 }
@@ -110,8 +122,83 @@ button {
     margin: 1rem;
     outline: #c9cdcd solid 0.2rem;
 }
+
 #home{
     margin-bottom: 1rem;
+}
+/* Styles spécifiques pour la page de détails du lieu */
+#location-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+#location-details img {
+    width: 100%;
+    max-height: 330px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+#location-details h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #123A3A;
+}
+
+#location-details p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+#location-details .details {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+#comments {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+#comment {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #d9dfd7;
+    border: 1px solid #c9cdcd;
+    border-radius: 0.5rem;
+}
+
+#comment h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #123A3A;
+}
+
+#comment p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+#comment .author {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+#comment-divider {
+    margin-top: 2rem;
+    border-top: 1px solid #c9cdcd;
+}
+
+/* Style visuel pour séparer les commentaires */
+#comment:not(:last-child) {
+    border-bottom: 2px solid #c9cdcd;
+    padding-bottom: 1rem;
 }
 
 @media (max-width: 576px) {

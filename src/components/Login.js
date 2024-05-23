@@ -37,7 +37,7 @@ const Login = ({setIsLogin}) => {
             setErrorEmail(false);
             setErrorPassword(false);
             setIsLogin(true);
-            window.location.reload();
+            window.location.href = '/';
         } else {
             setErrorEmail(isEmailValid(email));
             setErrorPassword(isPasswordValid(password));

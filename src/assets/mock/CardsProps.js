@@ -8,9 +8,9 @@ import CardProps from "../../model/Card";
 import Comment from "../../model/Comment";
 
 const mockComments = [
-    new Comment("Alice", "Beautiful place", "Really enjoyed the scenery and the hike.", new Date()),
-    new Comment("Damien", "Great experience", "Perfect for a family outing.", new Date()),
-    new Comment("Céline", "Must visit", "Will definitely come back!", new Date())
+    new Comment("Alice", "Beau lieu", "J'ai vraiment apprécié le paysage et la randonnée.", new Date()),
+    new Comment("Damien", "Super expérience", "Parfait pour une sortie en famille.", new Date()),
+    new Comment("Céline", "À visiter absolument", "Je reviendrai certainement !", new Date())
 ];
 
 const mockCardData = [
@@ -20,7 +20,7 @@ const mockCardData = [
         laVoieVerteDesGaves,
         "La voie verte des gaves",
         mockComments,
-        "Moderate",
+        "Moyenne",
         "Lourdes, France"
     ),
     new CardProps(
@@ -29,7 +29,7 @@ const mockCardData = [
         leLacDeCastelneau,
         "Le Lac De Castelneau",
         mockComments,
-        "Easy",
+        "Facile",
         "Castelnau-Magnoac, France"
     ),
     new CardProps(
@@ -38,7 +38,7 @@ const mockCardData = [
         leLacDuTech,
         "Le Lac Du Tech",
         mockComments,
-        "Moderate",
+        "Moyenne",
         "Arrens-Marsous, France"
     ),
     new CardProps(
@@ -47,7 +47,7 @@ const mockCardData = [
         leLacEstaing,
         "Le Lac Estaing",
         mockComments,
-        "Moderate",
+        "Moyenne",
         "Estaing, France"
     ),
     new CardProps(
@@ -56,7 +56,7 @@ const mockCardData = [
         leValonDuSalut,
         "Le Valon Du Salut",
         mockComments,
-        "Easy",
+        "Facile",
         "Bagnères-de-Bigorre, France"
     ),
     new CardProps(
@@ -65,7 +65,7 @@ const mockCardData = [
         leLacDeGenosLoudenvielle,
         "Le lac de Génos-Loudenvielle",
         mockComments,
-        "Moderate",
+        "Moyenne",
         "Génos-Loudenvielle, France"
     )
 ];

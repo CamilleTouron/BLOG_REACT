@@ -1,9 +1,13 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Routes
 import './App.css';
 import Navbar from './components/Navbar';
 import Login from './components/Login';
 import Footer from "./components/Footer";
 import Home from "./components/Home";
+import Card from "./components/Card"
+import mockCardData from "./assets/mock/CardsProps";
+import { useParams } from 'react-router-dom';
 
 function App() {
     let cookie = document.cookie;
@@ -12,19 +16,30 @@ function App() {
         document.cookie = `isLogin=${isLogin}`;
         console.log('isLogin', isLogin)
     }, [isLogin]);
+
+    // Use useParams to get the 'id' parameter from the URL
+    let { id } = useParams();
+
     return (
-        <div className="App">
-            <header className="App-header">
-                <Navbar setIsLogin={setIsLogin}/>
-            </header>
-            <main>
-                {!isLogin && <Login setIsLogin={setIsLogin}/>}
-                {isLogin && <Home/>}
-            </main>
-            <footer>
-                <Footer/>
-            </footer>
-        </div>
+        <Router> {/* Wrap your components with Router */}
+            <div className="App">
+                <header className="App-header">
+                    <Navbar setIsLogin={setIsLogin}/>
+                </header>
+                <main>
+                    {/* Use Routes component to wrap Route components */}
+                    <Routes>
+                        <Route path="/login" element={<Login setIsLogin={setIsLogin} />} />
+                        <Route path="/" element={isLogin ? <Home /> : <Login setIsLogin={setIsLogin} />} />
+                        {/* Use 'id' obtained from useParams */}
+                        <Route path="/card/:id" element={<Card card={mockCardData[id]} />} />
+                    </Routes>
+                </main>
+                <footer>
+                    <Footer/>
+                </footer>
+            </div>
+        </Router>
     );
 }
 

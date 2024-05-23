@@ -24,7 +24,7 @@ const calculateMaxLength = () => {
     if (width < 250) return 25;
     if (width < 300) return 50;
     if (width < 768) return 100;
-    if (width < 992) return 150;
+    if (width < 1000) return 130;
     return 245;
 };
 
@@ -53,8 +53,8 @@ const HomeComponent = () => {
                                 <CardTitle tag="h2">{card.title}</CardTitle>
                                 <CardSubtitle className="text-muted">{`${card.comments.length} commentaires`}</CardSubtitle>
                                 <CardText>{truncateDescription(card.description, maxDescriptionLength)}</CardText>
-                                <CardLink href="#">En savoir plus</CardLink>
-                                <CardLink href="#">Voir les commentaires</CardLink>
+                                <CardLink href={`/card/${cardIndex}`}>En savoir plus</CardLink>
+                                <CardLink href={`/card/${cardIndex}#comments`}>Voir les commentaires</CardLink>
                             </CardBody>
                         </Card>
                     ))}
