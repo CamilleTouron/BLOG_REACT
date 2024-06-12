@@ -14,6 +14,10 @@ const Login = ({setIsLogin}) => {
     const [errorEmail, setErrorEmail] = useState(false);
     const [errorPassword, setErrorPassword] = useState(false);
 
+    useEffect(() => {
+        document.title = 'Connexion - Mes Montagnes';
+    }  , []);
+
     const handleEmailChange = (e) => {
         if (!isEmailValid(e.target.value)) {
             setErrorEmail(true);

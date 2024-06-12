@@ -33,6 +33,8 @@ const HomeComponent = () => {
     const [maxDescriptionLength, setMaxDescriptionLength] = useState(calculateMaxLength());
 
     useEffect(() => {
+        document.title = 'Accueil - Mes Montagnes';
+
         const handleResize = () => {
             setMaxDescriptionLength(calculateMaxLength());
         };

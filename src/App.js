@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Routes
+import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom'; // Import Routes
 import './App.css';
 import Navbar from './components/Navbar';
 import Login from './components/Login';
@@ -27,9 +27,10 @@ function App() {
                 </header>
                 <main>
                     <Routes>
-                        <Route path="/login" element={<Login setIsLogin={setIsLogin} />} />
-                        <Route path="/" element={isLogin ? <Home /> : <Login setIsLogin={setIsLogin} />} />
-                        <Route path="/card/:id" element={<Card card={mockCardData[id]} />} />
+                        <Route path="/connexion" element={<Login setIsLogin={setIsLogin} />} />
+                        <Route path="/" element={<Navigate to="/accueil" />} />
+                        <Route path="/accueil" element={isLogin ? <Home /> : <Login setIsLogin={setIsLogin} />} />
+                        <Route path="/details/:id" element={<Card card={mockCardData[id]} />} />
                     </Routes>
                 </main>
                 <footer>

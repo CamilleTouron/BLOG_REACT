@@ -1,36 +1,36 @@
 body {
-    background-color: #f8f9fa; /* Sets the background color for the entire page */
+    background-color: #f8f9fa;
     position: relative;
     min-height: 100vh;
 }
 
 main {
-    padding-bottom: 2.5rem; /* Adds space at the bottom of the page for the footer */
+    padding-bottom: 2.5rem;
 }
 
 h1 {
-    font-family: Georgia, serif; /* Font family for the heading */
-    font-size: 2rem !important; /* Larger font size for the heading */
-    margin-bottom: 1rem !important; /* Space between heading and input fields */
-    color: #123A3A !important; /* Green color for the heading */
+    font-family: Georgia, serif;
+    font-size: 2rem !important;
+    margin-bottom: 1rem !important;
+    color: #123A3A !important;
 }
 
 h2 {
-    font-size: 1.8rem !important; /* Larger font size for the heading */
-    margin-bottom: 1rem !important; /* Space between heading and input fields */
-    color: #123A3A !important; /* Green color for the heading */
+    font-size: 1.8rem !important;
+    margin-bottom: 1rem !important;
+    color: #123A3A !important;
 }
 
 h3 {
-    font-size: 1.4rem !important; /* Larger font size for the heading */
-    margin-bottom: 1rem !important; /* Space between heading and input fields */
-    color: #123A3A !important; /* Green color for the heading */
+    font-size: 1.4rem !important;
+    margin-bottom: 1rem !important;
+    color: #123A3A !important;
 }
 
 h4 {
-    font-size: 1rem !important; /* Larger font size for the heading */
-    margin-bottom: 1rem !important; /* Space between heading and input fields */
-    color: #123A3A !important; /* Green color for the heading */
+    font-size: 1rem !importan;
+    margin-bottom: 1rem !important;
+    color: #123A3A !important;
 }
 
 /* Container for both logo and form */
@@ -39,27 +39,24 @@ h4 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 70vh; /* Full viewport height */
+    min-height: 70vh;
 }
 
-/* Styles the logo */
 .logo {
-    width: 150px; /* Increased width for a bigger logo */
-    height: auto; /* Maintain aspect ratio */
+    width: 150px;
+    height: auto;
 }
 
-/* Specifically targets the form with ID 'login' */
 #login {
-    border: 2px solid #123A3A; /* Green border, adjust color as needed */
+    border: 2px solid #123A3A;
     padding: 2rem;
-    border-radius: 0.5rem; /* Rounded corners */
-    width: 70%; /* 1/3 of the screen width */
-    max-width: 400px; /* Maximum width */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    background-color: white; /* White background for the form */
+    border-radius: 0.5rem;
+    width: 70%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
 }
 
-/*general navbar displaying logo, site name and buttons horizontally aligned*/
 #navbar{
     display: flex;
     align-items: center;
@@ -70,15 +67,20 @@ h4 {
     justify-content: flex-start;
 }
 
-/*footer that displays elements horizontally aligned and centered*/
+#navbar .button-container {
+    margin-left: auto;
+    display: flex;
+    gap: 1rem; /* Space between buttons */
+}
+
 #footer{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #123A3A;
     color: white;
-    font-family: Georgia, serif; /* Font family for the heading */
-    font-size: 1rem !important; /* Larger font size for the heading */
+    font-family: Georgia, serif;
+    font-size: 1rem !important;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -86,7 +88,6 @@ h4 {
 
 }
 
-/* button style green with white text with a bit of margin */
 button {
     background-color: #123A3A;
     color: white;
@@ -95,21 +96,21 @@ button {
     border-radius: 0.5rem;
     cursor: pointer;
     margin: 0.5rem;
-    font-family: Georgia, serif !important; /* Font family for the heading */
-    font-size: 1rem !important; /* Larger font size for the heading */
+    font-family: Georgia, serif !important;
+    font-size: 1rem !important;
 }
 
-/* disconnect button in navbar sticking to the right */
-#disconnect{
-    margin-left: auto;
+#navbar .button-container button {
+    width: 150px;
+    height: 50px;
 }
-/* cards reactstrap style to minimize img size*/
+
 .card-img-top {
     width: 100%;
     height: 15vw;
     object-fit: cover;
 }
-/* css to make element within cards the same size*/
+
 .card-text, .card-link{
     height: 5rem;
 }
@@ -126,7 +127,7 @@ button {
 #home{
     margin-bottom: 1rem;
 }
-/* Styles spécifiques pour la page de détails du lieu */
+
 #location-details {
     display: flex;
     flex-direction: column;
@@ -195,7 +196,6 @@ button {
     border-top: 1px solid #c9cdcd;
 }
 
-/* Style visuel pour séparer les commentaires */
 #comment:not(:last-child) {
     border-bottom: 2px solid #c9cdcd;
     padding-bottom: 1rem;
@@ -203,14 +203,14 @@ button {
 
 @media (max-width: 576px) {
     #login {
-        width: 75%; /* Even wider on very small screens for better readability */
+        width: 75%;
     }
     .logo {
-        width: 100px; /* Increased width for a bigger logo */
-        height: auto; /* Maintain aspect ratio */
+        width: 100px;
+        height: auto;
     }
     h1{
-        font-size: 1rem !important; /* Larger font size for the heading */
+        font-size: 1rem !important;
     }
 
 }
