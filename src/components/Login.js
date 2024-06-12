@@ -44,54 +44,53 @@ const Login = ({setIsLogin}) => {
         }
     };
 
-    return (
-        <Container className="login-container">
-            <Form id={"login"} onSubmit={handleSubmit}>
-                <h2>Login</h2>
-                <div className="mb-3">
-                    <Label for="email" className="form-label">Email</Label>
-                    <Input
-                        type="text"
-                        name="email input"
-                        id="email"
-                        placeholder="Enter your email"
-                        value={email}
-                        onChange={handleEmailChange}
-                        className={`form-control ${errorEmail ? 'is-invalid' : ''}`}
-                        required={true}
-                    />
-                    {errorEmail ?
-                        (<div className="invalid-feedback">Please enter a valid email address.</div>)
-                        :
-                        (<div></div>)
-                    }
-                </div>
-                <div className="mb-3">
-                    <Label for="password" className="form-label">Password</Label>
-                    <Input
-                        type="password"
-                        name="password input"
-                        id="password"
-                        placeholder="Enter your password"
-                        value={password}
-                        onChange={handlePasswordChange}
-                        className={`form-control ${errorPassword ? 'is-invalid' : ''}`}
-                        required={true}
-                    />
-                    {errorPassword ?
-                        (<div className="invalid-feedback">Please enter a password containing letter, number and special
-                            character with a minimum of a length of 8 characters.</div>)
-                        :
-                        (<div></div>)
-                    }
-                </div>
-                <Button type="submit"
-                        color={`${(errorPassword || errorEmail) ? 'danger' : 'success'}`}
-                        onSubmit={handleSubmit}
-                >Login</Button>
-            </Form>
-        </Container>
-    );
+return (
+    <Container className="login-container">
+        <Form id={"login"} onSubmit={handleSubmit}>
+            <h2>Connexion</h2>
+            <div className="mb-3">
+                <Label for="email" className="form-label">Email</Label>
+                <Input
+                    type="text"
+                    name="email input"
+                    id="email"
+                    placeholder="Entrez votre email"
+                    value={email}
+                    onChange={handleEmailChange}
+                    className={`form-control ${errorEmail ? 'is-invalid' : ''}`}
+                    required={true}
+                />
+                {errorEmail ?
+                    (<div className="invalid-feedback">Veuillez entrer une adresse email valide.</div>)
+                    :
+                    (<div></div>)
+                }
+            </div>
+            <div className="mb-3">
+                <Label for="password" className="form-label">Mot de passe</Label>
+                <Input
+                    type="password"
+                    name="password input"
+                    id="password"
+                    placeholder="Entrez votre mot de passe"
+                    value={password}
+                    onChange={handlePasswordChange}
+                    className={`form-control ${errorPassword ? 'is-invalid' : ''}`}
+                    required={true}
+                />
+                {errorPassword ?
+                    (<div className="invalid-feedback">Veuillez entrer un mot de passe contenant des lettres, des chiffres et des caractères spéciaux d'une longueur minimale de 8 caractères.</div>)
+                    :
+                    (<div></div>)
+                }
+            </div>
+            <Button type="submit"
+                    color={`${(errorPassword || errorEmail) ? 'danger' : 'success'}`}
+                    onSubmit={handleSubmit}
+            >Connexion</Button>
+        </Form>
+    </Container>
+);
 };
 
 function isEmailValid(email) {

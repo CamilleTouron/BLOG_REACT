@@ -24,7 +24,7 @@ function App() {
         <Router> {/* Wrap your components with Router */}
             <div className="App">
                 <header className="App-header">
-                    <Navbar setIsLogin={setIsLogin}/>
+                    <Navbar isLogin={isLogin} setIsLogin={setIsLogin}/>
                 </header>
                 <main>
                     {/* Use Routes component to wrap Route components */}

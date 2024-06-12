@@ -48,15 +48,15 @@ const HomeComponent = () => {
                 <CardGroup key={groupIndex}>
                     {group.map((card, cardIndex) => (
                         <Card key={cardIndex}>
-                            <CardImg alt={card.alt} src={card.image} top />
-                            <CardBody>
-                                <CardTitle tag="h2">{card.title}</CardTitle>
-                                <CardSubtitle className="text-muted">{`${card.comments.length} commentaires`}</CardSubtitle>
-                                <CardText>{truncateDescription(card.description, maxDescriptionLength)}</CardText>
-                                <CardLink href={`/card/${cardIndex}`}>En savoir plus</CardLink>
-                                <CardLink href={`/card/${cardIndex}#comments`}>Voir les commentaires</CardLink>
-                            </CardBody>
-                        </Card>
+                        <CardImg alt={card.alt} src={card.image} top tabIndex="0" />
+                        <CardBody>
+                            <CardTitle tag="h2" tabIndex="0">{card.title}</CardTitle>
+                            <CardSubtitle className="text-muted" tabIndex="0">{`${card.comments.length} commentaires`}</CardSubtitle>
+                            <CardText tabIndex="0">{truncateDescription(card.description, maxDescriptionLength)}</CardText>
+                            <CardLink href={`/card/${cardIndex}`} tabIndex="0">En savoir plus</CardLink>
+                            <CardLink href={`/card/${cardIndex}#comments`} tabIndex="0">Voir les commentaires</CardLink>
+                        </CardBody>
+                    </Card>
                     ))}
                 </CardGroup>
             ))}
