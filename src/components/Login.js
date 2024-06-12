@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Button, Container, Form, Input, Label} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Helmet} from "react-helmet";
 
 // component Login that takes props setIsLogin
 const Login = ({setIsLogin}) => {
@@ -46,6 +47,9 @@ const Login = ({setIsLogin}) => {
 
 return (
     <Container className="login-container">
+        <Helmet>
+            <meta name="description" content={"Page de connexion."} />
+        </Helmet>
         <Form id={"login"} onSubmit={handleSubmit}>
             <h2>Connexion</h2>
             <div className="mb-3">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Card, CardBody, CardText, CardImg, CardTitle, CardLink, CardGroup, CardSubtitle } from "reactstrap";
 import mockCardData from "../assets/mock/CardsProps";
+import {Helmet} from "react-helmet";
 
 const groupCards = (cards, groupSize) => {
     return cards.reduce((result, card, index) => {
@@ -44,19 +45,28 @@ const HomeComponent = () => {
 
     return (
         <div id="home">
+            <Helmet>
+                <meta name="description"
+                      content={"Page d'affichage de la liste des randonnées affichées sous forme de cartes."}/>
+            </Helmet>
+            <br/>
+            <p>Bienvenu, vous retrouverez sur ce site des lieux de randonnées avec l'avis de randonneurs passionnées.</p>
             {groupedCards.map((group, groupIndex) => (
                 <CardGroup key={groupIndex}>
                     {group.map((card, cardIndex) => (
                         <Card key={cardIndex}>
-                        <CardImg alt={card.alt} src={card.image} top/>
-                        <CardBody>
-                            <CardTitle tag="h2" tabIndex="0">{card.title}</CardTitle>
-                            <CardSubtitle className="text-muted" tabIndex="0">{`${card.comments.length} commentaires`}</CardSubtitle>
-                            <CardText tabIndex="0">{truncateDescription(card.description, maxDescriptionLength)}</CardText>
-                            <CardLink href={`/card/${cardIndex}`} tabIndex="0">En savoir plus</CardLink>
-                            <CardLink href={`/card/${cardIndex}#comments`} tabIndex="0">Voir les commentaires</CardLink>
-                        </CardBody>
-                    </Card>
+                            <CardImg alt={card.alt} src={card.image} top/>
+                            <CardBody>
+                                <CardTitle tag="h2" tabIndex="0">{card.title}</CardTitle>
+                                <CardSubtitle className="text-muted"
+                                              tabIndex="0">{`${card.comments.length} commentaires`}</CardSubtitle>
+                                <CardText
+                                    tabIndex="0">{truncateDescription(card.description, maxDescriptionLength)}</CardText>
+                                <CardLink href={`/card/${cardIndex}`} tabIndex="0">En savoir plus</CardLink>
+                                <CardLink href={`/card/${cardIndex}#comments`} tabIndex="0">Voir les
+                                    commentaires</CardLink>
+                            </CardBody>
+                        </Card>
                     ))}
                 </CardGroup>
             ))}

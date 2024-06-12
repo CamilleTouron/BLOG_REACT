@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import mockCardData from "../assets/mock/CardsProps";
+import { Helmet } from 'react-helmet';
 
 const Card = () => {
     const { id } = useParams();
@@ -20,6 +21,9 @@ const Card = () => {
 
     return (
         <div id="location-details">
+            <Helmet>
+                <meta name="description" content={"Page d'affichage des détails d'un lieu de randonnées : description, variations de sentier et commentaires."} />
+            </Helmet>
             <h2 tabIndex="0">{card.title}</h2>
             <p tabIndex="0">Difficulté: {card.difficulty}</p>
             <p tabIndex="0">{card.description}</p>
