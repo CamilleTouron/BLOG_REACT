@@ -64,8 +64,8 @@ const HomeComponent = () => {
                                               tabIndex="0">{`${card.comments.length} commentaires`}</CardSubtitle>
                                 <CardText
                                     tabIndex="0">{truncateDescription(card.description, maxDescriptionLength)}</CardText>
-                                <CardLink href={`/card/${cardIndex}`} tabIndex="0">En savoir plus</CardLink>
-                                <CardLink href={`/card/${cardIndex}#comments`} tabIndex="0">Voir les
+                                <CardLink href={`/details/${cardIndex}`} tabIndex="0">En savoir plus</CardLink>
+                                <CardLink href={`/details/${cardIndex}#comments`} tabIndex="0">Voir les
                                     commentaires</CardLink>
                             </CardBody>
                         </Card>
