@@ -8,16 +8,13 @@ const Card = () => {
     const location = useLocation();
 
     useEffect(() => {
-        // Vérifier si l'URL contient "#comments"
         if (location.hash === "#comments") {
-            // Récupérer l'élément DOM de la section des commentaires
             const commentsSection = document.getElementById("comments");
             if (commentsSection) {
-                // Faire défiler la page jusqu'à la section des commentaires
                 commentsSection.scrollIntoView({ behavior: "smooth" });
             }
         }
-    }, [location.hash]); // Exécuter lorsque le hash dans l'URL change
+    }, [location.hash]);
 
     return (
         <div id="location-details">
