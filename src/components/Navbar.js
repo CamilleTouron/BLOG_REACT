@@ -7,8 +7,8 @@ const NavbarComponent = ({isLogin, setIsLogin}) => {
     const navigate = useNavigate();
 
     const handleDisconnect = () => {
-        setIsLogin(false);
-        document.cookie = "isLogin=false";
+        // setIsLogin(false);
+        // document.cookie = "isLogin=false";
         navigate("/login");
     };
     return (

@@ -214,3 +214,23 @@ button {
     }
 
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+table th, table td {
+    border: 1px solid #c9cdcd;
+    padding: 1rem;
+    text-align: left;
+}
+
+table thead {
+    background-color: #d9dfd7;
+}
+
+table tfoot {
+    background-color: #f2f2f2;
+}

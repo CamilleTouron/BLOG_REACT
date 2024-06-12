@@ -17,21 +17,18 @@ function App() {
         console.log('isLogin', isLogin)
     }, [isLogin]);
 
-    // Use useParams to get the 'id' parameter from the URL
     let { id } = useParams();
 
     return (
-        <Router> {/* Wrap your components with Router */}
+        <Router>
             <div className="App">
                 <header className="App-header">
                     <Navbar isLogin={isLogin} setIsLogin={setIsLogin}/>
                 </header>
                 <main>
-                    {/* Use Routes component to wrap Route components */}
                     <Routes>
                         <Route path="/login" element={<Login setIsLogin={setIsLogin} />} />
                         <Route path="/" element={isLogin ? <Home /> : <Login setIsLogin={setIsLogin} />} />
-                        {/* Use 'id' obtained from useParams */}
                         <Route path="/card/:id" element={<Card card={mockCardData[id]} />} />
                     </Routes>
                 </main>
