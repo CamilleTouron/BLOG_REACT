@@ -61,8 +61,8 @@ const HomeComponent = () => {
                                 <CardTitle tag="h2">{card.title}</CardTitle>
                                 <CardSubtitle className="text-muted">{`${card.comments.length} commentaires`}</CardSubtitle>
                                 <CardText>{truncateDescription(card.description, maxDescriptionLength)}</CardText>
-                                <CardLink href={`/details/${cardIndex}`}>En savoir plus</CardLink>
-                                <CardLink href={`/details/${cardIndex}#comments`}>Voir les commentaires</CardLink>
+                                <CardLink href={`/details/${cardIndex}`} aria-label={"Lien pour accèder aux details de "+card.title}>En savoir plus</CardLink>
+                                <CardLink href={`/details/${cardIndex}#comments`} aria-label={"Lien pour accèder aux commentaires de "+card.title}>Voir les commentaires</CardLink>
                             </CardBody>
                         </Card>
                     ))}
