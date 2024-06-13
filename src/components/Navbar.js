@@ -20,7 +20,7 @@ const NavbarComponent = ({isLogin, setIsLogin}) => {
 
     return (
         <div id="navbar">
-            <a href={"/"} aria-label={"Logo qui redirige vers la page d'accueil"}><img src={logo} alt="Logo de mesmontagnes.com" className="logo" draggable={false}/></a>
+            <a href={"/"} aria-label={"Mes montagnes"}><img aria-hidden={true} src={logo} alt="Logo de mesmontagnes.com" className="logo" draggable={false}/></a>
             <p id={"site-title"}>Mes Montagnes</p>
             <nav className="button-container">
                 <ul>
