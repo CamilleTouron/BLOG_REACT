@@ -74,19 +74,15 @@ const Card = () => {
                     </tfoot>
                 </table>
             </article>
-            <section id="comments">
+            <aside id="comments">
                 <h2>Commentaires ({card.comments.length})</h2>
                 {card.comments.length > 0 ? (
                     card.comments.map((comment, index) => (
-                        <article id="comment" key={index}>
+                        <article className="comment" key={index}>
                             <h3>{comment.title}</h3>
                             <p>{comment.content}</p>
                             <small>{comment.author}</small>
-                            <div aria-label={new Intl.DateTimeFormat('fr-FR', {
-                                year: 'numeric',
-                                month: 'long',
-                                day: 'numeric'
-                            }).format(new Date(comment.date))}>
+                            <div>
                                 <small>
                                     {new Intl.DateTimeFormat('fr-FR', {
                                         year: 'numeric',
@@ -100,7 +96,7 @@ const Card = () => {
                 ) : (
                     <p>No comments yet.</p>
                 )}
-            </section>
+            </aside>
         </section>
     );
 };

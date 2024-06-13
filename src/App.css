@@ -206,7 +206,7 @@ button {
     width: 100%;
 }
 
-#comment {
+.comment {
     margin-bottom: 2rem;
     padding: 1rem;
     background-color: #d9dfd7;
@@ -214,29 +214,29 @@ button {
     border-radius: 0.5rem;
 }
 
-#comment h2 {
+.comment h2 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
     color: #123A3A;
 }
 
-#comment p {
+.comment p {
     font-size: 1rem;
     margin-bottom: 0.5rem;
     color: #555;
 }
 
-#comment .author {
+.comment .author {
     font-size: 0.9rem;
     color: #777;
 }
 
-#comment-divider {
+.comment-divider {
     margin-top: 2rem;
     border-top: 1px solid #c9cdcd;
 }
 
-#comment:not(:last-child) {
+.comment:not(:last-child) {
     border-bottom: 2px solid #c9cdcd;
     padding-bottom: 1rem;
 }
