@@ -25,6 +25,9 @@ const Card = () => {
 
     return (
         <div id="location-details">
+            <caption>
+                {"Tableau des détails de "+ card.title +" et variations de sentier"}
+            </caption>
             <Helmet>
                 <meta name="description" content={"Page d'affichage des détails d'un lieu de randonnées : description, variations de sentier et commentaires."} />
             </Helmet>
