@@ -2,11 +2,12 @@ import React, {useState, useEffect} from 'react';
 import {Button, Container, Form, Input, Label} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Helmet} from "react-helmet";
+import zxcvbn from 'zxcvbn';
 
 // component Login that takes props setIsLogin
 const Login = ({setIsLogin}) => {
     useEffect(() => {
-        document.title = 'Login MyMountains'; // Set the title of the page
+        document.title = 'Login MyMountains';
     }, []);
 
     const [email, setEmail] = useState('');
@@ -87,7 +88,7 @@ return (
                     required={true}
                 />
                 {errorPassword ?
-                    (<div className="invalid-feedback">Veuillez entrer un mot de passe contenant des lettres, des chiffres et des caractères spéciaux d'une longueur minimale de 8 caractères.</div>)
+                    (<div className="invalid-feedback">Votre mot de passe doit être suffisamment complexe pour assurer la sécurité de votre compte. Essayez quelque chose d'extraordinaire</div>)
                     :
                     (<div></div>)
                 }
@@ -108,8 +109,8 @@ function isEmailValid(email) {
 
 
 function isPasswordValid(password) {
-    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-    return regex.test(password);
+    const result = zxcvbn(password);
+    return result.score >= 3;
 }
 
 export default Login;
