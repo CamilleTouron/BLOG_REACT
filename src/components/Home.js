@@ -59,14 +59,11 @@ const HomeComponent = () => {
                         <Card key={cardIndex}>
                             <CardImg alt={card.alt} src={card.image} top/>
                             <CardBody>
-                                <CardTitle tag="h2" tabIndex="0">{card.title}</CardTitle>
-                                <CardSubtitle className="text-muted"
-                                              tabIndex="0">{`${card.comments.length} commentaires`}</CardSubtitle>
-                                <CardText
-                                    tabIndex="0">{truncateDescription(card.description, maxDescriptionLength)}</CardText>
-                                <CardLink href={`/details/${cardIndex}`} tabIndex="0">En savoir plus</CardLink>
-                                <CardLink href={`/details/${cardIndex}#comments`} tabIndex="0">Voir les
-                                    commentaires</CardLink>
+                                <CardTitle tag="h2">{card.title}</CardTitle>
+                                <CardSubtitle className="text-muted">{`${card.comments.length} commentaires`}</CardSubtitle>
+                                <CardText>{truncateDescription(card.description, maxDescriptionLength)}</CardText>
+                                <CardLink href={`/details/${cardIndex}`}>En savoir plus</CardLink>
+                                <CardLink href={`/details/${cardIndex}#comments`}>Voir les commentaires</CardLink>
                             </CardBody>
                         </Card>
                     ))}
