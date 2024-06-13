@@ -18,7 +18,7 @@ const NavbarComponent = ({isLogin, setIsLogin}) => {
         <div id="navbar" color="light" light expand="md">
             <a href={"/"}><img src={logo} alt="Logo de mesmontagnes.com" className="logo" draggable={false}/></a>
             <h1>Mes Montagnes</h1>
-            <div className="button-container">
+            <nav className="button-container">
                 <Button
                     id={"navbar-home"} // changed from "home"
                     color={"success"}
@@ -59,7 +59,7 @@ const NavbarComponent = ({isLogin, setIsLogin}) => {
                     Se connecter
                 </Button>)
                 }
-            </div>
+            </nav>
         </div>
     );
 };
