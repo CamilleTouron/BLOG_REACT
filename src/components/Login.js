@@ -68,7 +68,7 @@ return (
                     onChange={handleEmailChange}
                     className={`form-control ${errorEmail ? 'is-invalid' : ''}`}
                     required={true}
-                    autoFocus
+                    autoFocus={true}
                     autoComplete={"username"}
                 />
                 {errorEmail ?
