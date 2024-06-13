@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import Card from "./components/Card"
 import mockCardData from "./assets/mock/CardsProps";
 import { useParams } from 'react-router-dom';
+import MentionLegal from './components/MentionLegal';
 
 function App() {
     let cookie = document.cookie;
@@ -31,6 +32,7 @@ function App() {
                         <Route path="/" element={<Navigate to="/accueil" />} />
                         <Route path="/accueil" element={<Home />} />
                         <Route path="/details/:id" element={<Card card={mockCardData[id]} />} />
+                        <Route path="/mention-legal" element={<MentionLegal />} />
                     </Routes>
                 </main>
                 <footer>

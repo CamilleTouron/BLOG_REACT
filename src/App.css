@@ -274,3 +274,50 @@ table thead {
 table tfoot {
     background-color: #f2f2f2;
 }
+
+#footer a#lien-mentions-legales {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#footer a#lien-mentions-legales:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+#mention-legal {
+    margin: 20px;
+}
+
+#mention-legal h1 {
+    font-size: 2rem;
+    color: #123A3A;
+    margin-bottom: 1rem;
+}
+
+#mention-legal h2 {
+    font-size: 1.8rem;
+    color: #123A3A;
+    margin-bottom: 0.5rem;
+}
+
+#mention-legal h3 {
+    font-size: 1.6rem;
+    color: #123A3A;
+    margin-bottom: 0.5rem;
+}
+
+#mention-legal p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+#mention-legal section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #d9dfd7;
+    border: 1px solid #c9cdcd;
+    border-radius: 0.5rem;
+}
