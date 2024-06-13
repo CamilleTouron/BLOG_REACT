@@ -321,3 +321,8 @@ table tfoot {
     border: 1px solid #c9cdcd;
     border-radius: 0.5rem;
 }
+
+.form-control:focus {
+    border-color: #004d40 !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 77, 64, 0.25) !important;
+}
