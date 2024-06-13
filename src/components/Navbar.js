@@ -21,7 +21,7 @@ const NavbarComponent = ({isLogin, setIsLogin}) => {
     return (
         <div id="navbar" color="light" light expand="md">
             <a href={"/"}><img src={logo} alt="Logo de mesmontagnes.com" className="logo" draggable={false}/></a>
-            <h1>Mes Montagnes</h1>
+            <p id={"site-title"}>Mes Montagnes</p>
             <nav className="button-container">
                 <ul>
                     <li><a id={"navbar-home"} href={"/accueil"} aria-label={"Lien vers l'accueil"}>Accueil</a></li>

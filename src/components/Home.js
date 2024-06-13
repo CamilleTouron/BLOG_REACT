@@ -51,8 +51,7 @@ const HomeComponent = () => {
                 <meta name="description"
                       content={"Page d'affichage de la liste des randonnées affichées sous forme de cartes."}/>
             </Helmet>
-            <br/>
-            <h2>Bienvenu, vous retrouverez sur ce site des lieux de randonnées avec l'avis de randonneurs passionnées.</h2>
+            <h1 id={"bienvenu"}>Bienvenu, vous retrouverez sur ce site des lieux de randonnées avec l'avis de randonneurs passionnées.</h1>
             {groupedCards.map((group, groupIndex) => (
                 <CardGroup key={groupIndex}>
                     {group.map((card, cardIndex) => (

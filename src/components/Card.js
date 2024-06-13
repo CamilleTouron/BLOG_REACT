@@ -28,7 +28,7 @@ const Card = () => {
             <Helmet>
                 <meta name="description" content={"Page d'affichage des détails d'un lieu de randonnées : description, variations de sentier et commentaires."} />
             </Helmet>
-            <h2>{card.title}</h2>
+            <h1>{card.title}</h1>
             <p>Difficulté: {card.difficulty}</p>
             <p>{card.description}</p>
             <table>
@@ -70,11 +70,11 @@ const Card = () => {
                 </tfoot>
             </table>
             <div id="comments">
-                <h3>Commentaires ({card.comments.length})</h3>
+                <h2>Commentaires ({card.comments.length})</h2>
                 {card.comments.length > 0 ? (
                     card.comments.map((comment, index) => (
                         <div id="comment" key={index}>
-                            <h4>{comment.title}</h4>
+                            <h3>{comment.title}</h3>
                             <p>{comment.content}</p>
                             <small>{comment.author}</small>
                             <div aria-label={new Intl.DateTimeFormat('fr-FR', {
