@@ -55,7 +55,7 @@ return (
         <Helmet>
             <meta name="description" content={"Page de connexion."} />
         </Helmet>
-        <Form id={"login"} onSubmit={handleSubmit}>
+        <Form id={"login"} onSubmit={handleSubmit} action={"/accueil"} method={"post"}>
             <h2>Connexion</h2>
             <div className="mb-3">
                 <Label for="email" className="form-label">Email</Label>
