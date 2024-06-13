@@ -29,7 +29,7 @@ function App() {
                     <Routes>
                         <Route path="/connexion" element={<Login setIsLogin={setIsLogin} />} />
                         <Route path="/" element={<Navigate to="/accueil" />} />
-                        <Route path="/accueil" element={isLogin ? <Home /> : <Login setIsLogin={setIsLogin} />} />
+                        <Route path="/accueil" element={<Home />} />
                         <Route path="/details/:id" element={<Card card={mockCardData[id]} />} />
                     </Routes>
                 </main>

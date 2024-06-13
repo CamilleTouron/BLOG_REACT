@@ -32,7 +32,7 @@ const NavbarComponent = ({isLogin, setIsLogin}) => {
                 >
                     Accueil
                 </Button>
-                {isLogin &&
+                {isLogin ? (
                     <Button
                         id={"navbar-disconnect"} // changed from "disconnect"
                         color={"success"}
@@ -45,7 +45,19 @@ const NavbarComponent = ({isLogin, setIsLogin}) => {
                         tabIndex="0"
                     >
                         Se déconnecter
-                    </Button>
+                    </Button>) : (<Button
+                    id={"navbar-disconnect"} // changed from "disconnect"
+                    color={"success"}
+                    onClick={handleDisconnect}
+                    onKeyPress={(event) => {
+                        if (event.key === 'Enter') {
+                            handleDisconnect();
+                        }
+                    }}
+                    tabIndex="0"
+                >
+                    Se connecter
+                </Button>)
                 }
             </div>
         </div>
