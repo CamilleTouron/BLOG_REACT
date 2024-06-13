@@ -24,59 +24,61 @@ const Card = () => {
     }, [location.hash]);
 
     return (
-        <div id="location-details">
-            <caption>
-                {"Tableau des détails de "+ card.title +" et variations de sentier"}
-            </caption>
-            <Helmet>
-                <meta name="description" content={"Page d'affichage des détails d'un lieu de randonnées : description, variations de sentier et commentaires."} />
-            </Helmet>
-            <h1>{card.title}</h1>
-            <p>Difficulté: {card.difficulty}</p>
-            <p>{card.description}</p>
-            <table>
-                <thead>
-                <tr>
-                    <th>Nom du sentier</th>
-                    <th>Difficulté</th>
-                    <th>Distance</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Sentier du pêcheur</td>
-                    <td>Facile</td>
-                    <td>3 kilomètres</td>
-                </tr>
-                <tr>
-                    <td>Sentier du bucheron</td>
-                    <td>Moyen</td>
-                    <td>5 kilomètres</td>
-                </tr>
-                <tr>
-                    <td>Sentier du fermier</td>
-                    <td>Difficile</td>
-                    <td>10 kilomètres</td>
-                </tr>
-                <tr>
-                    <td>Sentier du marchand</td>
-                    <td>Moyen</td>
-                    <td>7 kilomètres</td>
-                </tr>
-                </tbody>
-                <tfoot>
-                <tr>
-                    <td>Durée maximale : 2 heures</td>
-                    <td>Altitude maximale : 300 mètres</td>
-                    <td>Dénivelé total : 500 mètres</td>
-                </tr>
-                </tfoot>
-            </table>
-            <div id="comments">
+        <section id="location-details">
+            <article>
+                <Helmet>
+                    <meta name="description" content={"Page d'affichage des détails d'un lieu de randonnées : description, variations de sentier et commentaires."} />
+                </Helmet>
+                <h1>{card.title}</h1>
+                <p>Difficulté: {card.difficulty}</p>
+                <p>{card.description}</p>
+                <table>
+                    <caption>
+                        {"Tableau des détails de " + card.title + " et variations de sentier"}
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th>Nom du sentier</th>
+                        <th>Difficulté</th>
+                        <th>Distance</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Sentier du pêcheur</td>
+                        <td>Facile</td>
+                        <td>3 kilomètres</td>
+                    </tr>
+                    <tr>
+                        <td>Sentier du bucheron</td>
+                        <td>Moyen</td>
+                        <td>5 kilomètres</td>
+                    </tr>
+                    <tr>
+                        <td>Sentier du fermier</td>
+                        <td>Difficile</td>
+                        <td>10 kilomètres</td>
+                    </tr>
+                    <tr>
+                        <td>Sentier du marchand</td>
+                        <td>Moyen</td>
+                        <td>7 kilomètres</td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td>Durée maximale : 2 heures</td>
+                        <td>Altitude maximale : 300 mètres</td>
+                        <td>Dénivelé total : 500 mètres</td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </article>
+            <section id="comments">
                 <h2>Commentaires ({card.comments.length})</h2>
                 {card.comments.length > 0 ? (
                     card.comments.map((comment, index) => (
-                        <div id="comment" key={index}>
+                        <article id="comment" key={index}>
                             <h3>{comment.title}</h3>
                             <p>{comment.content}</p>
                             <small>{comment.author}</small>
@@ -93,13 +95,13 @@ const Card = () => {
                                     }).format(new Date(comment.date))}
                                 </small>
                             </div>
-                        </div>
+                        </article>
                     ))
                 ) : (
                     <p>No comments yet.</p>
                 )}
-            </div>
-        </div>
+            </section>
+        </section>
     );
 };
 
