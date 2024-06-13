@@ -53,9 +53,9 @@ const HomeComponent = () => {
             </Helmet>
             <h1 id={"bienvenu"}>Bienvenu, vous retrouverez sur ce site des lieux de randonnées avec l'avis de randonneurs passionnées.</h1>
             {groupedCards.map((group, groupIndex) => (
-                <CardGroup key={groupIndex}>
+                <CardGroup key={groupIndex} tag={"section"}>
                     {group.map((card, cardIndex) => (
-                        <Card key={cardIndex}>
+                        <Card key={cardIndex} tag={"article"}>
                             <CardImg alt={card.alt} src={card.image} aria-label={"Image de "+card.title} top/>
                             <CardBody>
                                 <CardTitle tag="h2">{card.title}</CardTitle>
