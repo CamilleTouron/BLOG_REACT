@@ -33,7 +33,6 @@ h4 {
     color: #123A3A !important;
 }
 
-/* Container for both logo and form */
 .login-container {
     display: flex;
     flex-direction: column;
@@ -70,7 +69,37 @@ h4 {
 #navbar .button-container {
     margin-left: auto;
     display: flex;
-    gap: 1rem; /* Space between buttons */
+    gap: 1rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button-container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.button-container ul li {
+    margin: 0 10px;
+}
+
+.button-container ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button-container ul li a:hover {
+    background-color: darkgreen;
 }
 
 #footer{
