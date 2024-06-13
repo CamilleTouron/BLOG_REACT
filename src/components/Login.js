@@ -68,6 +68,8 @@ return (
                     onChange={handleEmailChange}
                     className={`form-control ${errorEmail ? 'is-invalid' : ''}`}
                     required={true}
+                    autoFocus
+                    autoComplete={"username"}
                 />
                 {errorEmail ?
                     (<div className="invalid-feedback">Veuillez entrer une adresse email valide.</div>)
@@ -86,6 +88,7 @@ return (
                     onChange={handlePasswordChange}
                     className={`form-control ${errorPassword ? 'is-invalid' : ''}`}
                     required={true}
+                    autoComplete={"current-password"}
                 />
                 {errorPassword ?
                     (<div className="invalid-feedback">Votre mot de passe doit être suffisamment complexe pour assurer la sécurité de votre compte. Essayez quelque chose d'extraordinaire</div>)

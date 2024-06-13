@@ -34,7 +34,7 @@ const Card = () => {
                 <p>{card.description}</p>
                 <table>
                     <caption>
-                        {"Tableau des détails de " + card.title + " et variations de sentier"}
+                        {"Tableau des détails de " + card.title + " et ses variations de sentier"}
                     </caption>
                     <thead>
                     <tr>
