@@ -56,7 +56,7 @@ const HomeComponent = () => {
                 <CardGroup key={groupIndex}>
                     {group.map((card, cardIndex) => (
                         <Card key={cardIndex}>
-                            <CardImg alt={card.alt} src={card.image} top/>
+                            <CardImg alt={card.alt} src={card.image} aria-label={"Image de "+card.title} top/>
                             <CardBody>
                                 <CardTitle tag="h2">{card.title}</CardTitle>
                                 <CardSubtitle className="text-muted">{`${card.comments.length} commentaires`}</CardSubtitle>
