@@ -24,8 +24,8 @@ const NavbarComponent = ({isLogin, setIsLogin}) => {
             <p id={"site-title"}>Mes Montagnes</p>
             <nav className="button-container">
                 <ul>
-                    <li><a id={"navbar-home"} href={"/accueil"} aria-label={"Lien vers l'accueil"}>Accueil</a></li>
-                    <li><a id={"navbar-disconnect"} onClick={handleDisconnect} href={"/connexion"} aria-label={"Lien de déconnexion qui redirige vers la page de connexion"}>{isDisconnect}</a></li>
+                    <li><a id={"navbar-home"} href={"/accueil"}>Accueil</a></li>
+                    <li><a id={"navbar-disconnect"} onClick={handleDisconnect} href={"/connexion"}>{isDisconnect}</a></li>
                 </ul>
             </nav>
         </div>
