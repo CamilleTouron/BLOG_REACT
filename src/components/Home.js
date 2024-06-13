@@ -46,14 +46,14 @@ const HomeComponent = () => {
     const groupedCards = groupCards(mockCardData, 2);
 
     return (
-        <div id="home">
+        <section id="home" >
             <Helmet>
                 <meta name="description"
                       content={"Page d'affichage de la liste des randonnées affichées sous forme de cartes."}/>
             </Helmet>
             <h1 id={"bienvenu"}>Bienvenu, vous retrouverez sur ce site des lieux de randonnées avec l'avis de randonneurs passionnées.</h1>
             {groupedCards.map((group, groupIndex) => (
-                <CardGroup key={groupIndex} tag={"section"}>
+                <CardGroup key={groupIndex}>
                     {group.map((card, cardIndex) => (
                         <Card key={cardIndex} tag={"article"}>
                             <CardImg alt={card.alt} src={card.image} aria-label={"Image de "+card.title} top/>
@@ -68,7 +68,7 @@ const HomeComponent = () => {
                     ))}
                 </CardGroup>
             ))}
-        </div>
+        </section>
     );
 };
 
