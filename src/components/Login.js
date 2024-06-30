@@ -49,9 +49,12 @@ const Login = ({setIsLogin}) => {
             setErrorEmail(false);
             setErrorPassword(false);
             setIsLogin(true);
-
-            // Read the redirect path from the cookie and redirect the user
-            const redirectPath = Cookies.get('redirectAfterLogin') || '/';
+            Cookies.set('loginSuccess', 'true');
+            let redirectPath = Cookies.get('redirectAfterLogin') || '/';
+            if (redirectPath === '/connexion') {
+                Cookies.remove('redirectAfterLogin');
+                redirectPath = '/';
+            }
             window.location.href = redirectPath;
         } else {
             setErrorEmail(!isEmailValid(email));
