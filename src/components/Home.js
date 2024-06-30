@@ -48,7 +48,7 @@ const HomeComponent = () => {
     return (
         <section id="home" >
             <Helmet>
-                <meta name="description"
+                <meta name="accueil-description"
                       content={"Page d'affichage de la liste des randonnées affichées sous forme de cartes."}/>
             </Helmet>
             <h1 id={"bienvenu"}>Bienvenu, vous retrouverez sur ce site des lieux de randonnées avec l'avis de randonneurs passionnées.</h1>

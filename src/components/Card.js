@@ -27,7 +27,7 @@ const Card = () => {
         <section id="location-details">
             <article>
                 <Helmet>
-                    <meta name="description" content={"Page d'affichage des détails d'un lieu de randonnées : description, variations de sentier et commentaires."} />
+                    <meta name="details-description" content={"Page d'affichage des détails d'un lieu de randonnées : description, variations de sentier et commentaires."} />
                 </Helmet>
                 <h1>{card.title}</h1>
                 <p>Difficulté: {card.difficulty}</p>
