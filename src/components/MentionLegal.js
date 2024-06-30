@@ -107,6 +107,7 @@ const MentionLegal = () => {
                 <h2>Contact</h2>
                 <article>
                     <p>camille.touron.pro@gmail.com</p>
+                    <p>camille.touron@ynov.com</p>
                 </article>
             </section>
         </section>
