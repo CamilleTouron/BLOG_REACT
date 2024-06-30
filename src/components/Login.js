@@ -5,6 +5,7 @@ import {Helmet} from "react-helmet";
 import zxcvbn from 'zxcvbn';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import Cookies from 'js-cookie';
 
 // component Login that takes props setIsLogin
 const Login = ({setIsLogin}) => {
@@ -48,7 +49,10 @@ const Login = ({setIsLogin}) => {
             setErrorEmail(false);
             setErrorPassword(false);
             setIsLogin(true);
-            window.location.href = '/';
+
+            // Read the redirect path from the cookie and redirect the user
+            const redirectPath = Cookies.get('redirectAfterLogin') || '/';
+            window.location.href = redirectPath;
         } else {
             setErrorEmail(!isEmailValid(email));
             setErrorPassword(!isPasswordValid(password));
