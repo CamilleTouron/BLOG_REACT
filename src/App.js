@@ -9,13 +9,13 @@ import Card from "./components/Card"
 import mockCardData from "./assets/mock/CardsProps";
 import { useParams } from 'react-router-dom';
 import MentionLegal from './components/MentionLegal';
+import SiteMap from "./components/SiteMap";
 
 function App() {
     let cookie = document.cookie;
     const [isLogin, setIsLogin] = React.useState(cookie.includes('isLogin=true'));
     React.useEffect(() => {
         document.cookie = `isLogin=${isLogin}`;
-        console.log('isLogin', isLogin)
     }, [isLogin]);
 
     let { id } = useParams();
@@ -26,13 +26,14 @@ function App() {
                 <header className="App-header">
                     <Navbar isLogin={isLogin} setIsLogin={setIsLogin}/>
                 </header>
-                <main>
+                <main aria-label={"Contenu principal"}>
                     <Routes>
                         <Route path="/connexion" element={<Login setIsLogin={setIsLogin} />} />
                         <Route path="/" element={<Navigate to="/accueil" />} />
                         <Route path="/accueil" element={<Home />} />
                         <Route path="/details/:id" element={<Card card={mockCardData[id]} />} />
                         <Route path="/mention-legal" element={<MentionLegal />} />
+                        <Route path="/plan-site" element={<SiteMap />} />
                     </Routes>
                 </main>
                 <footer>

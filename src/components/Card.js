@@ -10,7 +10,7 @@ const Card = () => {
 
     useEffect(() => {
         document.title = mockCardData[id].title + ' - Mes Montagnes';
-    }  , []);
+    } );
 
     useEffect(() => {
         if (location.hash === "#comments") {
