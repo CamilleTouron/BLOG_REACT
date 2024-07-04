@@ -45,7 +45,7 @@ const NavbarComponent = ({ isLogin, setIsLogin }) => {
     };
 
     return (
-        <div aria-label={"Haut de page"} id="navbar">
+        <div id="navbar">
             <a href={"/"} aria-label={"Accueil"}>
                 <img aria-hidden={true} src={logo} alt="Logo de mesmontagnes.com" className="logo" draggable={false} />
             </a>

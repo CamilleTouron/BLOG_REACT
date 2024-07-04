@@ -23,7 +23,7 @@ function App() {
     return (
         <Router>
             <div className="App">
-                <header className="App-header">
+                <header  aria-label={"Haut de page"}  className="App-header">
                     <Navbar isLogin={isLogin} setIsLogin={setIsLogin}/>
                 </header>
                 <main aria-label={"Contenu principal"}>
@@ -36,7 +36,7 @@ function App() {
                         <Route path="/plan-site" element={<SiteMap />} />
                     </Routes>
                 </main>
-                <footer>
+                <footer  aria-label={"Bas de page"}>
                     <Footer/>
                 </footer>
             </div>

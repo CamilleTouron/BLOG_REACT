@@ -2,7 +2,7 @@ import React from 'react';
 
 const FooterComponent = () => {
     return (
-        <div aria-label={"Bas de page"} id="footer">
+        <div id="footer">
             Développé par Camille Touron &#10084;&#65039; &copy; 2024 mesmontages.com
             <nav className="button-container-bis" aria-label={"Menu secondaire"}>
                 <ul>
